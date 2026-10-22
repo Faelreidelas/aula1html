@@ -1,0 +1,111 @@
+/* Reset básico e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+}
+
+/* NAVBAR FLEXBOX */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161b22;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #238636;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0f6fc;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #2ea44f;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #8b949e;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #58a6ff;
+}
+
+/* CONTAINER & LAYOUT DOS CARDS USANDO FLEXBOX */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar linha para fazer as colunas */
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* CARDS */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  /* Bordas arredondadas nos cantos opostos estilo UI customizada */
+  border-radius: 16px 2px 16px 2px;
+  overflow: hidden;
+  /* Largura dinâmica baseada em flexbox */
+  flex: 1 1 calc(33.333% - 1.5rem);
+  min-width: 280px;
+  max-width: 380px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #58a6ff;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  /* Detalhe de borda arredondada na imagem */
+  border-bottom: 2px solid #238636;
+}
+
+.card-content {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-content h3 {
+  color: #f0f6fc;
+  font-size: 1.1rem;
+}
+
+.card-content p {
+  color: #8b949e;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
