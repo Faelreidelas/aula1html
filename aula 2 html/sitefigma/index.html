@@ -1,55 +1,202 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfólio do Jociel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria | Estudante de Front-end</title>
+
+  <!-- fontes do Google. TODO: testar se ta carregando rápido -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <!-- &lt lesser than(menor que)  e &gt greater than (maior que) -->
-        <div class="logo"> <span class="simbolo-logo"> &lt; </span> dev.portfólio <span  class="simbolo-logo"> /&gt; </span> </div>
+  <header class="topo">
+    <div class="container">
+      <a href="#inicio" class="logo">&lt; dev.portfolio /&gt;</a>
 
-        <nav>
-            <ul>
-                <li><a href="#inicio"> Início </a></li>
-                <li><a href="#sobre"> Sobre </a></li>
-                <li><a href="#projetos"> Projetos </a></li>
-                <li><a href="#ferramentas"> Ferramentas </a></li>
-                <li><a href="#contato"> Contato </a></li>
-            </ul>
-        </nav>
+      <!-- TODO: menu hambúrguer pro mobile -->
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#">Ferramentas</a></li> 
+          <li><a href="#">Contato</a></li>     
+        </ul>
+      </nav>
 
-        <div class="icone-login">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-circle-user"></i>
-        </div>
-    </header>
+      <div class="topo-acoes">
+        <a href="https://github.com/" class="btn-mini">&lt;&gt; GitHub</a>
+        <span class="avatar-topo" aria-hidden="true">☺</span>
+      </div>
+    </div>
+  </header>
 
-    <main>     
-        <section class="area-inicio">
-            <div class="area-texto">
-                <h1>Olá Mundo! Sou o <span class="nome-destaque">Jociel</span>, professor do Senac de Desenvolvimento de Sistemas.</h1>
-                <p>Está landing page é um projeto desenvolvido em sala com os melhores alunos do melhor curso do Senac-DF, utilizando tecnologias frontend HTML, CSS e JavaScript. <br> Cada linha reflete minha paixao por continuar ensinando.</p>
+  <main>
 
-                <div class="botoes-iniciais">
-                    <a href="#projetos" class="btn-ver-projetos"> <i class="fa-regular fa-eye"></i> Ver Meus Projetos</a>
-                    <a href="#github" class="btn-github"> <i class="fa-brands fa-github"></i> Meu GitHub</a>
-                </div>
-
-                <div>
-                    
-                    <p class="foco-atual"> <i class="fa-solid fa-laptop-code"></i> <span>FOCO ATUAL</span> - Flexbox, Grid & Semântica</p>
-                    <p>Construindo consistência diária no código e refinando alinhamentos visuais na tela.</p>
-                </div>
-            </div>
-
-            <img class="area-imagem" src="./img/Escritório.png" alt="Area de Trabalho e Estudo">
-        </section>
-    </main>
     
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+
+        <div class="hero-texto">
+          <h1>Olá, mundo! Sou a <span>Maria</span>, estudante de Front-end.</h1>
+          <p>
+            Esta landing page é meu primeiro projeto construído do zero
+            utilizando apenas HTML5 semântico e CSS3 puro. Cada linha
+            reflete minha paixão por aprender criando.
+          </p>
+
+          <div class="botoes">
+            <a href="#projetos" class="btn btn-principal">👁 Ver Meus Projetos</a>
+            <a href="https://github.com/" class="btn btn-secundario">⌨ Meu GitHub</a>
+          </div>
+
+          <div class="foco-atual">
+            <span class="foco-icone" aria-hidden="true">▣</span>
+            <div>
+              <p class="foco-titulo"><small>FOCO ATUAL</small> • <strong>Flexbox, Grid &amp; Semântica</strong></p>
+              <p class="foco-texto">Construindo consistência diária no código e refinando alinhamentos visuais na tela.</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="hero-foto">
+          
+          <img src="img/workspace.jpg" alt="Notebook com código aberto sobre uma mesa de estudos">
+          <figcaption>⌘ Workspace de Estudos • Diário de Bordo #01</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+
+    
+    <section class="jornada" id="sobre">
+      <div class="container">
+        <header class="titulo-secao">
+          <span class="etiqueta">Minha jornada</span>
+          <h2>O que aprendi até agora</h2>
+          <p>Passo a passo, consolidando as bases da web para construir páginas acessíveis e agradáveis.</p>
+        </header>
+
+        <div class="cards-aprendizado">
+
+          <article class="card-aprendizado">
+            <div class="card-topo">
+              <span class="icone icone-html">HTML</span>
+              <span class="selo selo-roxo">Fase 1</span>
+            </div>
+            <h3>HTML Semântico</h3>
+            <p>Uso de tags corretas como &lt;main&gt;, &lt;article&gt;, estruturação de cabeçalhos e formulários acessíveis com labels claras e semântica pura.</p>
+            <p class="status status-verde">✔ Fundação dominada</p>
+          </article>
+
+          <article class="card-aprendizado">
+            <div class="card-topo">
+              <span class="icone icone-css">CSS</span>
+              <span class="selo selo-verde">Em prática</span>
+            </div>
+            <h3>CSS Moderno</h3>
+            <p>Entendimento completo do Modelo de Caixas (Box Model), seletores específicos, variáveis nativas (Custom Properties), tipografia balanceada e contrastes seguros.</p>
+            <p class="status status-verde">↻ Exercícios em andamento</p>
+          </article>
+
+          <article class="card-aprendizado">
+            <div class="card-topo">
+              <span class="icone icone-resp">📱</span>
+              <span class="selo selo-laranja">Conceito</span>
+            </div>
+            <h3>Design Responsivo</h3>
+            <p>Criação de interfaces que se adaptam naturalmente a telas de smartphones, tablets e notebooks por meio de flexbox e media queries fluidas.</p>
+            <p class="status status-laranja">◷ Próximas metas</p>
+          </article>
+
+        </div>
+
+        <blockquote class="reflexao">
+          <p class="reflexao-etiqueta">REFLEXÃO DO APRENDIZADO</p>
+          <p class="reflexao-texto">
+            “A transição para tecnologia me ensinou que errar a sintaxe faz parte do processo.
+            Cada erro no console é apenas uma oportunidade de entender a web mais a fundo.”
+          </p>
+          <footer class="autora">
+            <span class="avatar-autora">MR</span>
+            <div>
+              <strong>Mariana Rocha</strong>
+              <span>Estudante Front-end Júnior</span>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+
+    
+    <section class="projetos" id="projetos">
+      <div class="container">
+        <header class="titulo-secao">
+          <span class="etiqueta">Trabalhos iniciais</span>
+          <h2>Projetos &amp; Experimentos</h2>
+          <p>Resultados reais dos exercícios propostos neste primeiro módulo de aprendizado.</p>
+        </header>
+
+        <div class="grade-projetos">
+
+          <article class="card-projeto">
+            <div class="projeto-img img-1">
+              <img src="img/atividade-01.png" alt="Print da página de apresentação pessoal">
+              <span class="selo-atividade">Atividade #01</span>
+            </div>
+            <div class="projeto-corpo">
+              <ul class="tags">
+                <li>HTML</li>
+                <li class="tag-roxa">CSS Puro</li>
+              </ul>
+              <h3>Cartão de apresentação</h3>
+              <p>Primeira página feita só com HTML e CSS, focada em hierarquia de títulos.</p>
+            </div>
+          </article>
+
+          <article class="card-projeto">
+            <div class="projeto-img img-2">
+              <img src="img/atividade-02.png" alt="Print do formulário de criar conta">
+              <span class="selo-atividade">Atividade #02</span>
+            </div>
+            <div class="projeto-corpo">
+              <ul class="tags">
+                <li>Acessibilidade</li>
+                <li class="tag-roxa">Forms HTML</li>
+              </ul>
+              <h3>Formulário de cadastro</h3>
+              <p>Campos com label, foco visível e mensagens claras de preenchimento.</p>
+            </div>
+          </article>
+
+          <article class="card-projeto">
+            <div class="projeto-img img-3">
+              <img src="img/atividade-03.png" alt="Print do card de produto com tênis">
+              <span class="selo-atividade">Atividade #03</span>
+            </div>
+            <div class="projeto-corpo">
+              <ul class="tags">
+                <li>CSS Flexbox</li>
+                <li class="tag-roxa">Micro-layouts</li>
+              </ul>
+              <h3>Card de produto</h3>
+              
+              <p class="em-breve">Descrição em breve...</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+
 </body>
 </html>
