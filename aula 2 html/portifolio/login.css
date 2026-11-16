@@ -1,0 +1,80 @@
+/* Página de cadastro — identidade visual Rafael.dev */
+:root {
+  --ink: #171717;
+  --paper: #f4f1e9;
+  --muted: #77756f;
+  --lime: #c7f36b;
+  --purple: #7656d8;
+  --line: rgba(23, 23, 23, .16);
+  --font: "Space Grotesk", sans-serif;
+  --mono: "DM Mono", monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: var(--paper); color: var(--ink); font-family: var(--font); }
+a { color: inherit; text-decoration: none; }
+.topbar { height: 78px; padding: 0 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; letter-spacing: -.7px; font-size: 19px; }
+.brand-mark { display: grid; place-items: center; width: 31px; height: 31px; background: var(--ink); color: var(--lime); border-radius: 9px 9px 9px 2px; }
+.brand-dot { color: var(--purple); margin-left: -8px; }
+.back-link { color: #625f59; font-size: 12px; font-weight: 600; }
+.back-link:hover, .login-hint a:hover { color: var(--purple); }
+.page { width: min(1050px, 88%); min-height: 690px; margin: 48px auto; display: grid; grid-template-columns: .9fr 1.1fr; background: #fffefa; box-shadow: 0 22px 70px rgba(35, 29, 18, .08); }
+.intro-panel { position: relative; overflow: hidden; min-height: 690px; padding: 57px 48px; background: var(--ink); color: white; }
+.eyebrow, .section-label { font: 10px var(--mono); letter-spacing: 1.5px; }
+.eyebrow { color: rgba(255,255,255,.62); display: flex; align-items: center; gap: 10px; }
+.eyebrow span { width: 23px; height: 2px; background: var(--lime); }
+h1 { margin: 38px 0 20px; font-size: clamp(45px, 5vw, 65px); line-height: .98; letter-spacing: -3.5px; }
+h1 em { color: var(--lime); font-style: normal; }
+.intro-text { max-width: 290px; color: rgba(255,255,255,.62); font-size: 13px; line-height: 1.8; }
+.decoration { position: absolute; width: 300px; height: 300px; left: 50%; top: 56%; transform: translate(-50%, -15%); display: grid; place-items: center; }
+.orbit { position: absolute; border: 1px solid rgba(199,243,107,.35); border-radius: 50%; }
+.orbit-a { width: 230px; height: 230px; }
+.orbit-b { width: 180px; height: 260px; transform: rotate(55deg); }
+.symbol { width: 125px; height: 125px; border-radius: 50%; background: var(--lime); color: var(--ink); display: grid; place-items: center; font: 700 30px var(--mono); box-shadow: 12px 12px 0 rgba(118,86,216,.55); transform: rotate(-8deg); z-index: 1; }
+.spark { position: absolute; top: 18px; right: 22px; color: var(--purple); font-size: 42px; }
+.code-note { position: absolute; bottom: 17px; left: 0; background: var(--purple); padding: 10px 13px; font: 9px var(--mono); letter-spacing: 1px; }
+.panel-footer { position: absolute; left: 48px; bottom: 28px; color: rgba(255,255,255,.45); font: 9px var(--mono); letter-spacing: 1px; }
+.panel-footer span { color: var(--lime); margin: 0 6px; }
+.form-panel { padding: 65px clamp(35px, 6vw, 75px); display: flex; flex-direction: column; justify-content: center; }
+.section-label { color: var(--purple); margin: 0 0 13px; }
+.form-heading h2 { margin: 0; font-size: 36px; letter-spacing: -1.7px; }
+.form-heading h2 span { color: var(--purple); }
+.form-heading > p:last-child { margin: 9px 0 30px; color: var(--muted); font-size: 13px; }
+.register-form { display: grid; gap: 17px; }
+.field { display: grid; gap: 7px; }
+.field label { font-size: 11px; font-weight: 700; }
+.field input { width: 100%; height: 47px; border: 1px solid #dedbd3; border-radius: 3px; padding: 0 13px; background: #fffefa; outline: none; color: var(--ink); font: 12px var(--font); transition: border .2s, box-shadow .2s; }
+.field input::placeholder { color: #aaa69e; }
+.field input:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(118,86,216,.10); }
+.input-wrap { position: relative; }
+.input-wrap > span { position: absolute; left: 13px; top: 14px; color: var(--purple); font: 13px var(--mono); }
+.input-wrap input { padding-left: 32px; }
+.field small { color: #99958c; font-size: 10px; }
+.submit-button { margin-top: 6px; height: 49px; padding: 0 17px; border: 0; border-radius: 3px; background: var(--purple); color: white; display: flex; align-items: center; justify-content: space-between; font: 600 12px var(--font); cursor: pointer; transition: background .2s, transform .2s; }
+.submit-button:hover { background: #6041c2; transform: translateY(-2px); }
+.submit-button span { color: var(--lime); font-size: 18px; }
+.form-note { color: #a09c94; font-size: 9px; line-height: 1.6; text-align: center; margin: 0; }
+.login-hint { border-top: 1px solid var(--line); margin-top: 25px; padding-top: 20px; text-align: center; color: var(--muted); font-size: 11px; }
+.login-hint a { color: var(--purple); font-weight: 700; }
+.footer { width: min(1050px, 88%); margin: 0 auto 25px; display: flex; justify-content: space-between; color: #99958c; font: 9px var(--mono); }
+@media (max-width: 760px) {
+  .page { grid-template-columns: 1fr; margin: 25px auto; }
+  .intro-panel { min-height: 340px; padding: 35px; }
+  h1 { font-size: 48px; margin-top: 25px; }
+  .intro-text { max-width: 350px; }
+  .decoration { width: 180px; height: 180px; left: auto; right: 0; top: 45%; transform: translate(15%, -10%); opacity: .65; }
+  .orbit-a { width: 145px; height: 145px; }
+  .orbit-b { width: 115px; height: 165px; }
+  .symbol { width: 82px; height: 82px; font-size: 20px; }
+  .spark { font-size: 27px; }
+  .code-note { display: none; }
+  .panel-footer { left: 35px; bottom: 18px; }
+  .form-panel { padding: 42px 30px; }
+}
+@media (max-width: 420px) {
+  .topbar { padding: 0 6%; }
+  .back-link { font-size: 10px; }
+  .intro-panel { min-height: 365px; }
+  .decoration { top: 56%; right: -25px; }
+  .footer { flex-wrap: wrap; gap: 8px; }
+}

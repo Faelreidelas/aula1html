@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crie sua conta no portfólio de Rafael.">
+  <title>Cadastro | Rafael.dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">R</span> rafael<span class="brand-dot">.</span>dev</a>
+    <a class="back-link" href="index.html">← Voltar ao portfólio</a>
+  </header>
+
+  <main class="page">
+    <section class="intro-panel">
+      <p class="eyebrow"><span></span> ÁREA DE ACESSO</p>
+      <h1>Seu próximo<br>passo começa<br><em>aqui.</em></h1>
+      <p class="intro-text">Crie seu cadastro para fazer parte deste espaço. Preencha seus dados e vamos nessa!</p>
+      <div class="decoration" aria-hidden="true">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="symbol">&lt;R/&gt;</div>
+        <span class="spark">✳</span>
+        <span class="code-note">CREATE_ACCOUNT( )</span>
+      </div>
+      <p class="panel-footer">RAFAEL.DEV <span>•</span> PORTFÓLIO 2026</p>
+    </section>
+
+    <section class="form-panel">
+      <div class="form-heading">
+        <p class="section-label">NOVO POR AQUI?</p>
+        <h2>Crie sua conta<span>.</span></h2>
+        <p>É rapidinho. Preencha os campos abaixo.</p>
+      </div>
+
+      <form class="register-form" action="#" method="post">
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar?" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="usuario">Nome de usuário</label>
+          <div class="input-wrap"><span aria-hidden="true">@</span><input type="text" id="usuario" name="usuario" placeholder="seuusuario" autocomplete="username" minlength="3" required></div>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@exemplo.com" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="senha">Criar senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Mínimo de 8 caracteres" autocomplete="new-password" minlength="8" required>
+          <small>Use pelo menos 8 caracteres.</small>
+        </div>
+
+        <button type="submit" class="submit-button">Cadastrar <span>↗</span></button>
+        <p class="form-note">Ao continuar, você confirma que os dados informados são seus.</p>
+      </form>
+
+      <div class="login-hint">Já tem uma conta? <a href="#">Faça login</a></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Feito com curiosidade e código.</span>
+    <span>© 2026 Rafael</span>
+  </footer>
+</body>
+</html>
